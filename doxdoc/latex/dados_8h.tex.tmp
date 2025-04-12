@@ -1,0 +1,38 @@
+\doxysection{Referência ao ficheiro C\+:/\+Users/\+Diogo Apolinário/\+Desktop/\+Repositorio\+EDA/\+Trabalho\+\_\+\+Pratico/src/dados.h}
+\hypertarget{dados_8h}{}\label{dados_8h}\index{C:/Users/Diogo Apolinário/Desktop/RepositorioEDA/Trabalho\_Pratico/src/dados.h@{C:/Users/Diogo Apolinário/Desktop/RepositorioEDA/Trabalho\_Pratico/src/dados.h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$malloc.\+h$>$}\newline
+Diagrama de dependências de inclusão para dados.\+h\+:
+% FIG 0
+Este grafo mostra quais são os ficheiros que incluem directamente ou indirectamente este ficheiro\+:
+% FIG 1
+\doxysubsubsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_a_n_t_e_n_a}{ANTENA}}
+\item 
+struct \mbox{\hyperlink{struct_a_n_t_e_n_a_f_i_l_e}{ANTENAFILE}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Definições de tipos}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{dados_8h_a03f035f963b46338ab374901160393b8}\label{dados_8h_a03f035f963b46338ab374901160393b8} 
+typedef struct ANTENA {\bfseries ANTENA}
+\item 
+\Hypertarget{dados_8h_a92dd1e001f0411f87d0268a7b8707749}\label{dados_8h_a92dd1e001f0411f87d0268a7b8707749} 
+typedef struct ANTENAFILE {\bfseries ANTENAFILE}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+\begin{DoxyAuthor}{Autor}
+Diogo Apolin�rio 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Data}
+March 2025 
+\end{DoxyDate}
+
+
+Definido no ficheiro \mbox{\hyperlink{dados_8h_source}{dados.\+h}}.
+

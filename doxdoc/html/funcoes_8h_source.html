@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Manipulação de estruturas de dados avançadas: Código-Fonte de C:/Users/Diogo Apolinário/Desktop/RepositorioEDA/Trabalho_Pratico/src/funcoes.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Manipulação de estruturas de dados avançadas
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Localizar',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrada</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">funcoes.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="funcoes_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">/*****************************************************************/</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="dados_8h.html">dados.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><a class="code hl_struct" href="struct_a_n_t_e_n_a.html">ANTENA</a>* <a class="code hl_function" href="funcoes_8h.html#a5b13af62bac3304fcbe08f085c15d958">CriaAntena</a>(<span class="keywordtype">int</span> linha, <span class="keywordtype">int</span> coluna, <span class="keywordtype">char</span> nome);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><a class="code hl_struct" href="struct_a_n_t_e_n_a.html">ANTENA</a>* <a class="code hl_function" href="funcoes_8h.html#a2f96e5d091e2a8a226baf2b034ffd6c5">inserirAntena</a>(<a class="code hl_struct" href="struct_a_n_t_e_n_a.html">ANTENA</a>* h, <a class="code hl_struct" href="struct_a_n_t_e_n_a.html">ANTENA</a>* n);</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keywordtype">int</span> <a class="code hl_function" href="funcoes_8h.html#a2fe6cf11f0589f5a8f2a3ae432c01b81">mostrarMatriz</a>(<a class="code hl_struct" href="struct_a_n_t_e_n_a.html">ANTENA</a>* h);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordtype">int</span> <a class="code hl_function" href="funcoes_8h.html#a349ff70821e6fc619b3f01a65d9d7282">mostrarMatrizDoFicheiro</a>(<a class="code hl_struct" href="struct_a_n_t_e_n_a.html">ANTENA</a>* h);</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">int</span> <a class="code hl_function" href="funcoes_8h.html#af2b699d0c13273c3a21ab638bf9b311b">mostrarLista</a>(<a class="code hl_struct" href="struct_a_n_t_e_n_a.html">ANTENA</a>* h);</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">int</span> <a class="code hl_function" href="funcoes_8h.html#ae7cfde8148fbc99a3422069d1d2f8fd2">mostrarListaDoFicheiro</a>(<a class="code hl_struct" href="struct_a_n_t_e_n_a.html">ANTENA</a>* h);</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><a class="code hl_struct" href="struct_a_n_t_e_n_a.html">ANTENA</a>* <a class="code hl_function" href="funcoes_8h.html#a9a9145c0c2e2f1d6bd8ad014e1f6272a">removerAntena</a>(<a class="code hl_struct" href="struct_a_n_t_e_n_a.html">ANTENA</a>* h, <span class="keywordtype">int</span> linha, <span class="keywordtype">int</span> coluna);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><a class="code hl_struct" href="struct_a_n_t_e_n_a.html">ANTENA</a>* <a class="code hl_function" href="funcoes_8h.html#added54c252bce918e76c96a5b3a333e0">calcularZonasNefastas</a>(<a class="code hl_struct" href="struct_a_n_t_e_n_a.html">ANTENA</a>* h);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">int</span> <a class="code hl_function" href="funcoes_8h.html#af22efeedc479ba3d47e91152756657df">LerFicheiro</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* NomeFicheiro, <a class="code hl_struct" href="struct_a_n_t_e_n_a.html">ANTENA</a>** h);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">bool</span> <a class="code hl_function" href="funcoes_8h.html#a937bc3abc3af4a328ed3c1f379599ecf">GravarAntenaBinario</a>(<span class="keywordtype">char</span>* nomeFicheiro, <a class="code hl_struct" href="struct_a_n_t_e_n_a.html">ANTENA</a>* h);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><a class="code hl_struct" href="struct_a_n_t_e_n_a.html">ANTENA</a>* <a class="code hl_function" href="funcoes_8h.html#ab4bf756678ff0936d32e1ca8ea144fff">LerAntenaBinario</a>(<span class="keywordtype">char</span>* nomeFicheiro);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="keywordtype">int</span> <a class="code hl_function" href="funcoes_8h.html#acf49bcfdecf3db4560d6d2ab1cefa843">GravarNoFicheiroTxt</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* nomeFicheiro, <a class="code hl_struct" href="struct_a_n_t_e_n_a.html">ANTENA</a>* h, <a class="code hl_struct" href="struct_a_n_t_e_n_a.html">ANTENA</a>* hNefastas);</div>
+<div class="ttc" id="adados_8h_html"><div class="ttname"><a href="dados_8h.html">dados.h</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_a2f96e5d091e2a8a226baf2b034ffd6c5"><div class="ttname"><a href="funcoes_8h.html#a2f96e5d091e2a8a226baf2b034ffd6c5">inserirAntena</a></div><div class="ttdeci">ANTENA * inserirAntena(ANTENA *h, ANTENA *n)</div><div class="ttdef"><b>Definição</b> <a href="funcoes_8c_source.html#l00053">funcoes.c:53</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_a2fe6cf11f0589f5a8f2a3ae432c01b81"><div class="ttname"><a href="funcoes_8h.html#a2fe6cf11f0589f5a8f2a3ae432c01b81">mostrarMatriz</a></div><div class="ttdeci">int mostrarMatriz(ANTENA *h)</div><div class="ttdef"><b>Definição</b> <a href="funcoes_8c_source.html#l00177">funcoes.c:177</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_a349ff70821e6fc619b3f01a65d9d7282"><div class="ttname"><a href="funcoes_8h.html#a349ff70821e6fc619b3f01a65d9d7282">mostrarMatrizDoFicheiro</a></div><div class="ttdeci">int mostrarMatrizDoFicheiro(ANTENA *h)</div><div class="ttdef"><b>Definição</b> <a href="funcoes_8c_source.html#l00238">funcoes.c:238</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_a5b13af62bac3304fcbe08f085c15d958"><div class="ttname"><a href="funcoes_8h.html#a5b13af62bac3304fcbe08f085c15d958">CriaAntena</a></div><div class="ttdeci">ANTENA * CriaAntena(int linha, int coluna, char nome)</div><div class="ttdef"><b>Definição</b> <a href="funcoes_8c_source.html#l00023">funcoes.c:23</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_a937bc3abc3af4a328ed3c1f379599ecf"><div class="ttname"><a href="funcoes_8h.html#a937bc3abc3af4a328ed3c1f379599ecf">GravarAntenaBinario</a></div><div class="ttdeci">bool GravarAntenaBinario(char *nomeFicheiro, ANTENA *h)</div><div class="ttdef"><b>Definição</b> <a href="funcoes_8c_source.html#l00603">funcoes.c:603</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_a9a9145c0c2e2f1d6bd8ad014e1f6272a"><div class="ttname"><a href="funcoes_8h.html#a9a9145c0c2e2f1d6bd8ad014e1f6272a">removerAntena</a></div><div class="ttdeci">ANTENA * removerAntena(ANTENA *h, int linha, int coluna)</div><div class="ttdef"><b>Definição</b> <a href="funcoes_8c_source.html#l00298">funcoes.c:298</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_ab4bf756678ff0936d32e1ca8ea144fff"><div class="ttname"><a href="funcoes_8h.html#ab4bf756678ff0936d32e1ca8ea144fff">LerAntenaBinario</a></div><div class="ttdeci">ANTENA * LerAntenaBinario(char *nomeFicheiro)</div><div class="ttdef"><b>Definição</b> <a href="funcoes_8c_source.html#l00649">funcoes.c:649</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_acf49bcfdecf3db4560d6d2ab1cefa843"><div class="ttname"><a href="funcoes_8h.html#acf49bcfdecf3db4560d6d2ab1cefa843">GravarNoFicheiroTxt</a></div><div class="ttdeci">int GravarNoFicheiroTxt(const char *nomeFicheiro, ANTENA *h, ANTENA *hNefastas)</div><div class="ttdef"><b>Definição</b> <a href="funcoes_8c_source.html#l00527">funcoes.c:527</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_added54c252bce918e76c96a5b3a333e0"><div class="ttname"><a href="funcoes_8h.html#added54c252bce918e76c96a5b3a333e0">calcularZonasNefastas</a></div><div class="ttdeci">ANTENA * calcularZonasNefastas(ANTENA *h)</div><div class="ttdef"><b>Definição</b> <a href="funcoes_8c_source.html#l00335">funcoes.c:335</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_ae7cfde8148fbc99a3422069d1d2f8fd2"><div class="ttname"><a href="funcoes_8h.html#ae7cfde8148fbc99a3422069d1d2f8fd2">mostrarListaDoFicheiro</a></div><div class="ttdeci">int mostrarListaDoFicheiro(ANTENA *h)</div><div class="ttdef"><b>Definição</b> <a href="funcoes_8c_source.html#l00150">funcoes.c:150</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_af22efeedc479ba3d47e91152756657df"><div class="ttname"><a href="funcoes_8h.html#af22efeedc479ba3d47e91152756657df">LerFicheiro</a></div><div class="ttdeci">int LerFicheiro(const char *NomeFicheiro, ANTENA **h)</div><div class="ttdef"><b>Definição</b> <a href="funcoes_8c_source.html#l00483">funcoes.c:483</a></div></div>
+<div class="ttc" id="afuncoes_8h_html_af2b699d0c13273c3a21ab638bf9b311b"><div class="ttname"><a href="funcoes_8h.html#af2b699d0c13273c3a21ab638bf9b311b">mostrarLista</a></div><div class="ttdeci">int mostrarLista(ANTENA *h)</div><div class="ttdef"><b>Definição</b> <a href="funcoes_8c_source.html#l00122">funcoes.c:122</a></div></div>
+<div class="ttc" id="astruct_a_n_t_e_n_a_html"><div class="ttname"><a href="struct_a_n_t_e_n_a.html">ANTENA</a></div><div class="ttdef"><b>Definição</b> <a href="dados_8h_source.html#l00016">dados.h:16</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>
