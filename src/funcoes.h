@@ -23,4 +23,4 @@ ANTENA* calcularZonasNefastas(ANTENA* h);
 int LerFicheiro(const char* NomeFicheiro, ANTENA** h);
 bool GravarAntenaBinario(char* nomeFicheiro, ANTENA* h);
 ANTENA* LerAntenaBinario(char* nomeFicheiro);
-int GravarNoFicheiroTxt(const char* nomeFicheiro, ANTENA* h, ANTENA* hNefastas);
+bool GravarNoFicheiroTxt(const char* nomeFicheiro, ANTENA* h);

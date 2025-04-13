@@ -55,12 +55,19 @@ ANTENA* inserirAntena(ANTENA* h, ANTENA* n) {		//insere uma antena na lista
 
 	if (n == NULL) return h;			// se não houver nova lista, devolve a lista original
 
+	// Verificar se já existe uma antena com a mesma linha e coluna
+	ANTENA* tmp = h;
+	while (tmp != NULL) {
+		if (tmp->linha == n->linha && tmp->coluna == n->coluna) {
+			free(n); // evitar duplicados
+			return h;
+		}
+		tmp = tmp->next;
+	}
 	
-	if (h == NULL) {				// se a lista original estiver vazia
-											
+	if (h == NULL) {				// se a lista original estiver vazia								
 		h = n;							// a lista nova passa a ser a primeira lista
 		n->next = NULL;					// a lista nova não aponta para mais nenhuma lista, porque é única
-
 		return h;						// devolve a primeira lista
 	}
 
@@ -316,7 +323,7 @@ ANTENA* removerAntena(ANTENA* h, int linha, int coluna) {		//remove uma antena d
 		}
 		aux = aux->next;						// avança na lista	
 	}
-	//printf("\n\nAntena nao encontrada!\n");		// se não encontrar a antena, mostra a mensagem
+	
 	return h;
 
 }
@@ -517,31 +524,27 @@ return 1;
 
 /**
  * brief Grava no ficheiro txt
- * 
+ *
  * \param nome do Ficheiro
  * \param h - Apontador da lista
- * \param hNefastas - Apontador da lista com as zonas nefastas
  * \return Ficheiro gravado no Txt
  */
 
-int GravarNoFicheiroTxt(const char* nomeFicheiro, ANTENA* h, ANTENA* hNefastas) {		//grava no ficheiro txt
+bool GravarNoFicheiroTxt(const char* nomeFicheiro, ANTENA* h) {		//grava no ficheiro txt
 
 	if (h == NULL) {		// se a lista estiver vazia
-		return 0;
+		return false;
 	}
 
 	ANTENA* aux = h;
 	ANTENA* aux2 = h;
-	ANTENA* nefasta = hNefastas;
-	ANTENA* nefasta2 = hNefastas;
 	int nLinhasMatriz = aux->linha, nColunasMatriz = aux->coluna;
-	int nColunasNefastas = 0, nLinhasNefastas = 0;
 
 	FILE* fp;													// apontador para o ficheiro
 
 	if (fopen_s(&fp, nomeFicheiro, "w") != 0) {				// se não conseguir abrir o ficheiro
 		printf("Erro ao abrir ficheiro.\n");
-		return 0;
+		return false;
 	}
 
 	while (aux != NULL) {										// enquanto a lista não for NULL	
@@ -552,42 +555,20 @@ int GravarNoFicheiroTxt(const char* nomeFicheiro, ANTENA* h, ANTENA* hNefastas) 
 		aux = aux->next;										// avança na lista
 	}
 
-	while (nefasta != NULL) {									// enquanto a lista das zonas nefastas não for NULL
-		if (nefasta->coluna > nColunasMatriz)					// se a coluna da zona nefasta for maior que a coluna da matriz
-			nColunasMatriz = nefasta->coluna;					// a coluna da matriz passa a ser a coluna da zona nefasta
-		if (nefasta->coluna < nColunasNefastas)					// se a coluna da zona nefasta for menor que a coluna das zonas nefastas
-			nColunasNefastas = nefasta->coluna;					// a coluna das zonas nefastas passa a ser a coluna da zona nefasta
-		if (nefasta->linha > nLinhasMatriz)						// se a linha da zona nefasta for maior que a linha da matriz
-			nLinhasMatriz = nefasta->linha;						// a linha da matriz passa a ser a linha da zona nefasta
-		if (nefasta->linha < nLinhasNefastas)					// se a linha da zona nefasta for menor que a linha das zonas nefastas
-			nLinhasNefastas = nefasta->linha;					// a linha das zonas nefastas passa a ser a linha da zona nefasta
-		nefasta = nefasta->next;								// avança na lista das zonas nefastas	
-	}
-
-
-	for (int i = nLinhasNefastas; i <= nLinhasMatriz; i++) {		// percorre as linhas da matriz, a começar na linha das zonas nefastas
-		for (int j = nColunasNefastas; j <= nColunasMatriz; j++) {	// percorre as colunas da matriz, a começar na coluna das zonas nefastas
-			if ((aux2 != NULL) && (nefasta2 != NULL) && (i == aux2->linha) && (j == aux2->coluna) && (i == nefasta2->linha) && (j == nefasta2->coluna)) {		// se a lista não for NULL e a linha e a coluna da lista forem iguais à linha e coluna da matriz e se a lista das zonas nefastas não for NULL e a linha e a coluna da zona nefasta forem iguais à linha e coluna da matriz
-				nefasta2 = nefasta2->next;		// avança na lista das zonas nefastas
-				if ((aux2 != NULL) && (i == aux2->linha) && (j == aux2->coluna)) {		// se a lista não for NULL e a linha e a coluna da lista forem iguais à linha e coluna da matriz
-					fprintf(fp, "%c", aux2->nome);		// escreve o caracter da lista no ficheiro
-					aux2 = aux2->next;						// avança na lista
+	for (int i = 1; i <= nLinhasMatriz; i++) {		// percorre as linhas da matriz, a começar na linha das zonas nefastas
+		for (int j = 1; j <= nColunasMatriz; j++) {	// percorre as colunas da matriz, a começar na coluna das zonas nefastas
+			if ((aux2 != NULL) && (i == aux2->linha) && (j == aux2->coluna)) {		// se a lista não for nula e a linha e a coluna da lista forem iguais à linha e coluna da matriz
+				fprintf(fp, "%c", aux2->nome);		// escreve o caracter da lista no ficheiro
+				aux2 = aux2->next;					// avança na lista
 				continue;
-				}
-				else if ((nefasta2 != NULL) && (i == nefasta2->linha) && (j == nefasta2->coluna)) {		// se a lista das zonas nefastas não for NULL e a linha e a coluna da zona nefasta forem iguais à linha e coluna da matriz
-					fprintf(fp, "%c", nefasta2->nome);		// escreve o caracter da zona nefasta no ficheiro	
-					nefasta2 = nefasta2->next;					// avança na lista das zonas nefastas
-					continue;
-				}
 			}
 			fprintf(fp, "%c", '.');		// se não houver antena ou zona nefasta, escreve um ponto no ficheiro
 		}
 		fprintf(fp, "%c", '\n');		// escreve uma nova linha no ficheiro
 	}
 
-return 1;
+	return true;
 }
-
 #pragma endregion
 
 #pragma region Gravar no Ficheiro Binario
